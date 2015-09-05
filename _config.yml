@@ -5,6 +5,6 @@ paginate: 5
 repo: starter
 github_org: maptime
 maptime:
-  chapter: Meetup name
-  twitter: YourName
+  chapter: Chapter name
+  twitter: TwitterHandle
   #disqus: YOUR DISQUS USERNAME
