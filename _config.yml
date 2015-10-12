@@ -8,3 +8,6 @@ maptime:
   chapter: Chapter name
   twitter: TwitterHandle
   #disqus: YOUR DISQUS USERNAME
+
+gems:
+  - jekyll-feed
