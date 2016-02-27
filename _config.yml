@@ -1,5 +1,6 @@
 baseurl: /starter
 permalink: pretty
+future: true
 markdown: kramdown
 paginate: 5
 repo: starter
