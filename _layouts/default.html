@@ -99,10 +99,12 @@
 <script>
   var rsvp = document.getElementById('rsvpdate');
   var date,formatted,link;
-  '{% for item in site.categories.event limit:1 %}'
-    date = '{{item.date | date:"%Y/%-m/%-d"}}';
-    formatted = '{{item.date | date:"%A, %b %d %Y"}}';
-    link = '{{item.rsvp}}';
+  '{% for item in site.categories.event %}'
+    if (new Date('{{item.date}}').getTime() >= new Date().getTime()) {
+      date = '{{item.date | date:"%Y/%-m/%-d"}}';
+      formatted = '{{item.date | date:"%A, %b %d %Y"}}';
+      link = '{{item.rsvp}}';
+    }
   '{% endfor %}'
 
   if (date && new Date().getTime() <= new Date(date).getTime() + (24 * 60 * 60 * 1000)) {
