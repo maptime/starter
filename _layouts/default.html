@@ -100,7 +100,7 @@
   var rsvp = document.getElementById('rsvpdate');
   var date,formatted,link;
   '{% for item in site.categories.event %}'
-    if (new Date('{{item.date}}').getTime() >= new Date().getTime()) {
+    if (new Date('{{item.date | date_to_xmlschema }}').getTime() >= new Date().getTime()) {
       date = '{{item.date | date:"%Y/%-m/%-d"}}';
       formatted = '{{item.date | date:"%A, %b %d %Y"}}';
       link = '{{item.rsvp}}';
